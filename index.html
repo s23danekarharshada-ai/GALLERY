@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Locked Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- PASSWORD PAGE -->
+<div id="login">
+ 
+ <H2></<h1>My Gallery</h1>
+    <input type="password" id="password" placeholder="Enter Password">
+    <br><br>
+    <button onclick="checkPassword()">Unlock</button>
+    <p id="error"></p>
+</div>
+
+<!-- GALLERY PAGE -->
+<div id="gallery">
+    <h1> Hommi</h1>
+
+    <div class="images">
+        <img src="img.jpj.jpeg">
+        <img src="Img.jpj1.jpeg">
+        <img src="Imj.jpj2.jpeg">
+        <img src="img.jpj1.jpeg">
+         <img src="Imj.jpj3.jpeg">
+          <img src="Imj.jpj4.jpeg">
+    </div>
+</div>
+
+<script>
+    function checkPassword() {
+        var pass = document.getElementById("password").value;
+
+        if (pass === "1203") {   // 👈 password here
+            document.getElementById("login").style.display = "none";
+            document.getElementById("gallery").style.display = "block";
+        } else {
+            document.getElementById("error").innerHTML = "❌ Wrong Password";
+        }
+    }
+</script>
+
+</body>
+</html>
